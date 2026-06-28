@@ -26,7 +26,7 @@ export default function Navbar() {
             </Link>
             <div className="flex items-center gap-4">
               <Link
-                href=""
+                href="../connexion"
                 className="text-white px-5 py-2 rounded-lg border border-white/30 hover:bg-white hover:text-[#0474C4] transition font-medium text-base">
                 Connexion
               </Link>
