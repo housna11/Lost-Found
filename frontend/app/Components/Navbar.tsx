@@ -15,7 +15,7 @@ export default function Navbar() {
             <Link href="/" className="hover:opacity-80 transition font-medium">
               Accueil
             </Link>
-            <Link href="" className="hover:opacity-80 transition font-medium">
+            <Link href="/declare" className="hover:opacity-80 transition font-medium">
               Déclarer
             </Link>
             <Link href="" className="hover:opacity-80 transition font-medium">

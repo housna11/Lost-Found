@@ -40,3 +40,33 @@ export async function register(
   if (!response.ok) {throw new Error(data.message);}
   return data;
 }
+
+export async function createObject(data: {
+  title: string;
+  description: string;
+  type: string;
+  location: string;
+  date: string;
+  image: File | null;
+
+}) {
+  const token = localStorage.getItem("token");
+  const formData= new FormData();
+  formData.append("title", data.title);
+  formData.append("description", data.description);
+  formData.append("type", data.type);
+  formData.append("location", data.location);
+  formData.append("date", data.date);
+   if (data.image) {
+    formData.append("image", data.image);
+  }
+  
+  const response = await fetch(`${API_URL}/items`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: formData,
+  });
+  return response.json();
+}
