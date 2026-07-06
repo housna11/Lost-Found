@@ -69,4 +69,22 @@ export async function createObject(data: {
     body: formData,
   });
   return response.json();
+
+}
+export async function getItems(
+  search = "",
+  type = "",
+  location = ""
+) {
+  const params = new URLSearchParams();
+
+  if (search) params.append("search", search);
+  if (type) params.append("type", type);
+  if (location) params.append("location", location);
+  const response = await fetch(`${API_URL}/items?${params.toString()}`
+  );
+  if (!response.ok) {
+    throw new Error("Erreur");
+  }
+  return response.json();
 }
