@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import HeroSection from "../Components/HeroSection";
 import SearchFilter from "../Components/SearchFilter";
 import { getItems } from "../Services/auth";
+import ObjectGrid from "../Components/ObjectGrid";
 
 type Item = {
   id: number;
@@ -44,6 +45,7 @@ export default function Home() {
           location={location}
           setLocation={setLocation}
         />
+        <ObjectGrid items={items}/>
       </div>
     </div>
   );
