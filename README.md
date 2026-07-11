@@ -1,57 +1,102 @@
-# 📦 Lost & Found - Full Stack App
+# 📦 Lost & Found - Full Stack Web Application
 
 ## 📌 Description
-Lost & Found est une application web full stack qui permet aux utilisateurs de déclarer, rechercher et gérer des objets perdus ou trouvés.
 
-Elle inclut un système d’authentification, une gestion des rôles (utilisateur / administrateur) ainsi qu’une interface simple pour la gestion des déclarations.
+**Lost & Found** est une application web Full Stack permettant aux utilisateurs de déclarer, rechercher et gérer des objets perdus ou trouvés.
 
----
-
-## 🏗 Architecture
-- Backend : API Laravel
-- Frontend : Next.js (TypeScript)
-- Base de données : MySQL
+L'application offre une interface intuitive pour publier des annonces, consulter les objets déclarés et gérer ses propres déclarations. Elle intègre également un système d'authentification sécurisé ainsi qu'une gestion des rôles (**Utilisateur** / **Administrateur**).
 
 ---
 
-## 🛠 Stack technique
-- 🐘 Laravel (API + Auth)
-- ▲ Next.js (TypeScript)
-- 🐬 MySQL
-- 🔐 Laravel Sanctum (authentification)
+## 🏗️ Architecture
+
+* **Backend** : Laravel 10 (API REST)
+* **Frontend** : Next.js (TypeScript)
+* **Base de données** : MySQL
+
+---
+
+## 🛠️ Stack Technique
+
+* 🐘 Laravel 10
+* ▲ Next.js
+* 🔷 TypeScript
+* 🎨 Tailwind CSS
+* 🐬 MySQL
+* 🔐 Laravel Sanctum
+* 🐳 Docker & Docker Compose
+* 🌱 Git & GitHub
 
 ---
 
 ## 👥 Rôles
 
 ### 👤 Utilisateur
-- S’inscrire / se connecter
-- Voir les objets perdus et trouvés
-- Filtrer par type et lieu
-- Ajouter une déclaration
-- Consulter ses propres déclarations
 
-### 🛡 Administrateur
-- Gérer toutes les déclarations
-- Modifier le statut d’un objet
-- Supprimer des déclarations
+* S'inscrire et se connecter
+* Consulter les objets perdus et trouvés
+* Rechercher et filtrer les annonces
+* Déclarer un objet perdu ou trouvé
+* Consulter ses propres déclarations
+* Modifier le statut de ses annonces
+
+### 🛡️ Administrateur
+
+* Consulter toutes les déclarations
+* Modifier le statut d'une annonce
+* Supprimer une déclaration incorrecte ou dupliquée
 
 ---
 
 ## 📄 Fonctionnalités principales
-- 🔐 Authentification sécurisée
-- 📦 Gestion des objets perdus/trouvés
-- 🔎 Système de filtrage
-- 👥 Gestion des rôles (user/admin)
+
+* 🔐 Authentification sécurisée avec Laravel Sanctum
+* 📦 Gestion des objets perdus et trouvés
+* ➕ Création de déclarations
+* 🔎 Recherche et filtrage des annonces
+* 📄 Consultation des détails d'un objet
+* 👥 Gestion des rôles (User / Admin)
+
+---
+
+## 🐳 Docker
+
+Le projet est entièrement conteneurisé avec **Docker** et **Docker Compose**.
+
+Les services disponibles sont :
+
+* Backend Laravel
+* Frontend Next.js
+* Base de données MySQL
+
+---
+
+## 📚 Documentation
+
+Le projet est accompagné de la documentation suivante :
+
+* 📄 [Cahier des charges](https://docs.google.com/document/d/1MG-aUlLgc6Hi6zQAYSxuo6F0jQrJdzpJh1vARznZLb8/edit?tab=t.0)
 
 ---
 
 ## 🧪 Tests
-- Tests unitaires avec PHPUnit
-- Vérification des fonctionnalités principales
+
+* Tests unitaires avec PHPUnit
+* Vérification des fonctionnalités principales
+
+---
+
+## 🚀 Déploiement
+
+L'application peut être déployée sur des plateformes telles que :
+
+* Render
+* Railway
+* Vercel (Frontend)
 
 ---
 
 ## 👩‍💻 Réalisé par
 
-- **Housna Fathi** – Développeuse web Full-Stack  
+**Housna Fathi**
+Développeuse Web Full-Stack
