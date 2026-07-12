@@ -77,4 +77,25 @@ class ItemController extends Controller
     return response()->json([ 'message' => 'Objet supprimé avec succès.' ]);
 }
 
+public function index(Request $request)
+{
+    $query = Item::query();
+    if ($request->filled('search')) {
+        $query->where('title', 'like', '%' . $request->search . '%');
+    }
+    if ($request->filled('type')) {
+        $query->where('type', $request->type);
+    }
+    if ($request->filled('location')) {
+        $query->where('location', 'like', '%' . $request->location . '%');
+    }
+    $items = $query->latest()->get();
+    return response()->json($items);
+}
+
+public function show(Item $item)
+{
+    return response()->json($item);
+}
+
 }
