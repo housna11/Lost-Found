@@ -66,6 +66,7 @@ class ItemController extends Controller
         'item' => $item,
     ]);
 }
+
     public function destroy(Item $item)
     {
     if ($item->user_id !== auth()->id()) {
