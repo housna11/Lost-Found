@@ -83,8 +83,18 @@ export async function getItems(
   if (location) params.append("location", location);
   const response = await fetch(`${API_URL}/items?${params.toString()}`
   );
+if (!response.ok) {
+  throw new Error("Erreur");
+}
+  return response.json();
+}
+//objet
+export async function getItem(id: string | number) {
+  const response = await fetch(`${API_URL}/items/${id}`);
+
   if (!response.ok) {
-    throw new Error("Erreur");
+    throw new Error(`Erreur ${response.status}`);
   }
+
   return response.json();
 }
