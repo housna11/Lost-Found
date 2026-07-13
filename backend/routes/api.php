@@ -25,4 +25,7 @@ Route::get('/items/{item}', [ItemController::class, 'show']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/items', [ItemController::class, 'store']);
+    Route::get('/my-items', [ItemController::class, 'myItems']);
+    Route::put('/items/{item}', [ItemController::class, 'update']);
+    Route:: delete('/items/{item}',[ItemController::class,'destroy']);
 });
