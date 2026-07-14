@@ -13,6 +13,7 @@ type ObjectCardProps = {
   image: string | null;
 };
 export default function ObjectCard({
+  id,
   title,
   description,
   type,
@@ -65,7 +66,7 @@ export default function ObjectCard({
             </div>
         </div>
         <Link
-          href="/"
+          href={`/items/${id}`}
           className="mt-7 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#023e73] to-[#0474C4] px-5 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           Voir les détails
         </Link>
