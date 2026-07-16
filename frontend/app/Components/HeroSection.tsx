@@ -51,7 +51,7 @@ export default function HeroSection() {
             Déclarer un objet
           </Link>
           <Link
-            href=""
+            href="#objets"
             className="rounded-xl border border-gray-200 bg-white px-8 py-4 text-center text-base font-semibold text-gray-700 transition hover:border-[#0474C4] hover:text-[#0474C4]">
             Explorer les déclarations
           </Link>

@@ -35,7 +35,7 @@ export default function ObjectGrid({ items }: ObjectGridProps) {
         </span>
       </div>
       
-      <section id="objects" className="grid grid-cols-3 gap-8">
+      <section id="objets" className="grid grid-cols-3 gap-8">
         {items.map((item) => (
           <ObjectCard key={item.id} {...item} />
         ))}
