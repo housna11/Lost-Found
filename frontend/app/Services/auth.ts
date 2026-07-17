@@ -11,7 +11,6 @@ export async function login(email: string, password: string) {
       password,
     }),
   });
-
   const data = await response.json();
   if (!response.ok) {throw new Error(data.message);}
   return data;
@@ -96,5 +95,8 @@ export async function getItem(id: string | number) {
     throw new Error(`Erreur ${response.status}`);
   }
 
+  if (!response.ok) {
+    throw new Error(`Erreur ${response.status}`);
+  }
   return response.json();
 }
