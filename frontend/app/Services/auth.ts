@@ -99,3 +99,22 @@ export async function getItem(id: string | number) {
 
   return response.json();
 }
+
+export async function updateItemStatus(
+  id: number,
+  status: "in_progress" | "resolved"
+) {
+  const token = localStorage.getItem("token");
+  const response = await fetch(`${API_URL}/items/${id}/status`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ status }),
+  });
+  if (!response.ok) {
+    throw new Error("Erreur lors de la mise à jour du statut.");
+  }
+  return response.json();
+}
