@@ -16,7 +16,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     localStorage.setItem("token", data.token);
     localStorage.setItem("user", JSON.stringify(data.user));
     toast.success("Connexion réussie !");
-    router.push("/");
+    window.location.href = "/";
   } catch (error) {
     toast.error("Email ou mot de passe incorrect");
   }
