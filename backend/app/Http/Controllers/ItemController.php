@@ -99,4 +99,25 @@ public function show(Item $item)
     return response()->json($item);
 }
 
+public function updateStatus(Request $request, Item $item)
+{
+    if ($item->user_id !== auth()->id() && auth()->user()->role !== 'admin') {
+        return response()->json([
+            'message' => 'Non autorisé.'
+        ], 403);
+    }
+
+    $validated = $request->validate([
+        'status' => 'required|in:in_progress,resolved',
+    ]);
+
+    $item->update([
+        'status' => $validated['status'],
+    ]);
+
+    return response()->json([
+        'message' => 'Statut mis à jour avec succès.',
+        'item' => $item,
+    ]);
+}
 }

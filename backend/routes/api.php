@@ -28,4 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/my-items', [ItemController::class, 'myItems']);
     Route::put('/items/{item}', [ItemController::class, 'update']);
     Route:: delete('/items/{item}',[ItemController::class,'destroy']);
+    Route:: patch('/items/{item}/status',[ItemController::class,'updateStatus']);
+
 });
