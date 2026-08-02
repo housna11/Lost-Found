@@ -3,6 +3,9 @@
 import { useState } from "react";
 import {createObject} from "../Services/auth";
 import toast  from "react-hot-toast";
+import Link from "next/link";
+import {ArrowLeft} from "lucide-react";
+
 
 export default function Declare() {
   const [preview, setPreview] = useState<string | null>(null);
@@ -50,7 +53,12 @@ export default function Declare() {
 
   return (
     <div className="pt-25 pb-25 min-h-screen bg-gradient-to-br from-[#eaf4ff] via-white to-[#f5f9ff] flex items-center justify-center px-4">
-      <div className="w-full max-w-3xl transform transition duration-300 hover:scale-[1.01]">
+      <div className="w-full max-w-3xl transform transition">
+        <Link
+          href="/"
+          className="mb-3 inline-flex items-center gap-2 text-[#0474C4] font-semibold">
+          <ArrowLeft size={18} />
+        </Link>
         <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 sm:p-8 hover:shadow-2xl transition duration-300">
             <div className="flex items-center gap-5 mb-8">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-[#023e73] to-[#0474C4] flex items-center justify-center text-3xl shadow-lg">
