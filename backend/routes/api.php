@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ItemController;
 
@@ -30,4 +31,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route:: delete('/items/{item}',[ItemController::class,'destroy']);
     Route:: patch('/items/{item}/status',[ItemController::class,'updateStatus']);
 
+    Route::middleware('admin')->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+    });
 });
